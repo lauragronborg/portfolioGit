@@ -1,0 +1,767 @@
+/* GENERELLE INSTILLINGER */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* siden sidder fast husk */
+}
+
+body {
+    background-color: white;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'futura', sans-serif;
+    color: #2B353E;
+}
+
+h2 {
+    font-family: 'futura', sans-serif;
+    color: #2B353E;
+}
+
+h3 {
+    font-family: 'futura', sans-serif;
+    color: #2B353E;
+}
+
+p {
+    font-family: 'futura', sans-serif;
+    color: #2B353E;
+}
+
+/* GENERELLE INSTILLINGER SLUT */
+
+/****  MENU ****/
+
+header {
+    position: fixed;
+    /*ligger fast på skærmen */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    padding: 1em;
+    z-index: 1;
+}
+
+header nav {
+    font-family: 'futura', sans-serif;
+    text-align: right;
+    margin: 0 5vw 0 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #2B353E;
+    padding: 5px;
+    display: block;
+}
+
+header nav a:hover {
+    color: #f0f0eb;
+}
+
+@media screen and (min-width: 676px) {
+    header nav a {
+        display: inline-block;
+    }
+}
+
+/**** MENU SLUT ****/
+
+/**** FORSIDE ****/
+
+#forside {
+    width: 100vw;
+    height: 167vw;
+    background-image: url(splashbilleder/mobilePortrait.png);
+    background-size: cover;
+}
+
+
+/* hvis jeg laver logo
+#forside .logo img {
+    width: 100%
+}
+
+.logo {
+    padding: 11px;
+    width: 15vw;
+    box-sizing: content-box;
+}
+*/
+
+/**** FORSIDE SLUT ****/
+
+/**** MEDIA QUERIES ****/
+
+@media screen and (min-width: 376px) and (orientation: landscape) {
+    #forside {
+        background-image: url(splashbilleder/mobileLandscape.png);
+        height: 59.9vw;
+    }
+    /* hvis jeg laver logo
+ .logo {
+        padding: 11px;
+        width: 10vw;
+        box-sizing: content-box;
+    }*/
+}
+
+
+@media screen and (min-width: 628px) and (orientation:portrait) {
+    #forside {
+        background-image: url(splashbilleder/tabletPortrait.png);
+        height: 133vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (orientation: landscape) {
+    #forside {
+        background-image: url(splashbilleder/tabletLandscape.png);
+        height: 75vw;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #forside {
+        background-image: url(splashbilleder/desktop.png);
+        height: 56.25vw;
+    }
+}
+
+/**** MEDIA QUERIES SLUT ****/
+
+/**** OM MIG ****/
+
+#omMig {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+}
+
+#omMig .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#omMig .column {
+    flex-basis: 300px;
+    flex-grow: 1;
+    align-self: auto;
+    padding: 20px 20px;
+}
+
+#omMig img {
+    width: 100%;
+
+}
+
+#omMig p {
+    font-family: 'futura', sans-serif;
+    font-size: 100%;
+    padding: 2px;
+
+}
+
+#omMig h3 {
+    font-family: 'futura', sans-serif;
+    font-size: 120%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+#omMig h1 {
+    font-family: 'futura', sans-serif;
+    font-size: 200%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+/**** OM MIG SLUT ****/
+
+#portfolio {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+}
+
+#portfolio .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio .column {
+    flex-basis: 300px;
+    flex-grow: 1;
+    align-self: auto;
+    padding: 20px 20px;
+}
+
+#portfolio img {
+    width: 100%;
+    padding: 20px;
+    /*transition: all 1s;
+    filter: brightness(100%);*/
+}
+
+#portfolio img:hover {
+    /* filter: brightness(105%);*/
+    transform: scale(1.1);
+}
+
+#portfolio h1 {
+    font-family: 'futura', sans-serif;
+    font-size: 200%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+/**** KONTAKT ****/
+
+#kontakt {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 100PX;
+    padding-bottom: 30px;
+}
+
+#kontakt .top {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+
+input[type=text],
+select,
+textarea {
+    width: 70%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* margin */
+    display: block;
+    margin: 6px auto 16px auto;
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: #1f1c2e;
+    /*** husk at ændre farve her ****/
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+}
+
+
+/* When moving the mouse over the submit button, add a darker color */
+
+input[type=submit]:hover {
+    background-color: #1f1c2e;
+}
+
+/**** KONTAKT SLUT ****/
+
+/**** EGET ANIMATIONSPROJEKT ****/
+
+#animationBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+}
+
+#animationBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#animationBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#animationBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#animationBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#animationBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#animationBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#animationBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#animationBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+
+/**** EGET ANIMATIONSPROJEKT SLUT ****/
+
+/**** CPH:DOX ****/
+
+#cphdoxBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+
+}
+
+#cphdoxBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#cphdoxBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#cphdoxBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+
+}
+
+#cphdoxBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#cphdoxBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#cphdoxBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#cphdoxBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#cphdoxBeskrivelse video {
+    padding-top: 40px;
+    padding-left: 20px;
+    width: 70%;
+}
+
+#cphdoxBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** CPH:DOX SLUT ****/
+
+/**** KEAEVENTS ****/
+
+#keaeventsBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+
+}
+
+#keaeventsBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#keaeventsBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#keaeventsBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+
+}
+
+#keaeventsBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#keaeventsBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#keaeventsBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#keaeventsBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#keaeventsBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** KEAEVENTS SLUT ****/
+
+/**** REDESIGN ****/
+
+#redesignBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+
+}
+
+#redesignBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#redesignBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#redesignBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#redesignBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#redesignBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#redesignBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#redesignBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#redesignBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** REDESIGN SLUT ****/
+
+/**** REPUBLIKKEN ****/
+
+#republikkenBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+
+}
+
+#republikkenBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#republikkenBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#republikkenBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#republikkenBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#republikkenBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#republikkenBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#republikkenBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#republikkenBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** REPUBLIKKEN SLUT ****/
+
+/**** SEX & SAMFUND ****/
+
+#sexsamfundBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+
+}
+
+#sexsamfundBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#sexsamfundBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#sexsamfundBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#sexsamfundBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#sexsamfundBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#sexsamfundBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#sexsamfundBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#sexsamfundBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** SEX & SAMFUND SLUT ****/
+
+/**** STILARTSITE ****/
+
+#stilartsiteBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+}
+
+#stilartsiteBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#stilartsiteBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#stilartsiteBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#stilartsiteBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#stilartsiteBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#stilartsiteBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#stilartsiteBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#stilartsiteBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+}
+
+/**** STILARTSITE SLUT ****/
+
+/**** VIRKSOMHEDSVIDEO ****/
+
+#virksomhedsvideoBeskrivelse {
+    max-width: 1024px;
+    display: block;
+    background-color: white;
+}
+
+#virksomhedsvideoBeskrivelse .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#virksomhedsvideoBeskrivelse .column {
+    padding: 20px 20px;
+    margin-top: 100px;
+}
+
+#virksomhedsvideoBeskrivelse img {
+    width: 70%;
+    padding: 20px;
+}
+
+#virksomhedsvideoBeskrivelse p {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#virksomhedsvideoBeskrivelse h1 {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+#virksomhedsvideoBeskrivelse h2 {
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+#virksomhedsvideoBeskrivelse h3 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#virksomhedsvideoBeskrivelse video {
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 70%;
+
+}
+
+#virksomhedsvideoBeskrivelse a {
+    text-decoration: none;
+    color: #2B353E;
+    font-family: 'futura', sans-serif;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/**** VIRKSOMHEDSVIDEO SLUT ****/
+
+/**** FOOTER ****/
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    background: #f0f0eb;
+}
+
+footer img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40px;
+}
+
+footer img:hover {
+    /* filter: brightness(105%);*/
+    transform: scale(1.1);
+}
+
+
+/**** FOOTER SLUT ****/
